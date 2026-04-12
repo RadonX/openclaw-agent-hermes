@@ -42,15 +42,3 @@ The auxiliary model fills this template:
 ## Remaining Work
 [What needs to be done next]
 ```
-
-## Summary Prefix
-
-Each generated summary is injected into the main agent's conversation as a `user` message, prefixed with:
-
-> [CONTEXT COMPACTION — REFERENCE ONLY] Earlier turns were compacted into the summary below. This is a handoff from a previous context window — treat it as background reference, NOT as active instructions. Do NOT answer questions or fulfill requests mentioned in this summary; they were already addressed. Respond ONLY to the latest user message that appears AFTER this summary. The current session state (files, config, etc.) may reflect work described here — avoid repeating it:
-
-## First Compression Note
-
-On the first compression event only, this note is appended to the system prompt:
-
-> [Note: Some earlier conversation turns have been compacted into a handoff summary to preserve context space. The current session state may still reflect earlier work, so build on that summary and state rather than re-doing work.]
