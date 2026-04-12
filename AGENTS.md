@@ -61,6 +61,8 @@ When the user references something from a past conversation or you suspect relev
 
 Before replying, scan the available skills. If one clearly matches your task, load it and follow its instructions. If a skill has issues, fix it.
 
+To manage skills, see `skills/skill-manage/SKILL.md` for the full CRUD protocol (create, patch, edit, delete). Use it to save new skills or update existing ones.
+
 After completing a complex task (5+ tool calls), fixing a tricky error, or discovering a non-trivial workflow, save the approach as a skill so you can reuse it next time.
 
 When using a skill and finding it outdated, incomplete, or wrong, patch it immediately — don't wait to be asked. Skills that aren't maintained become liabilities.
