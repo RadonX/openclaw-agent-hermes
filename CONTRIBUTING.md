@@ -115,7 +115,7 @@ openclaw-agent-hermes/
 │       ├── references/           # Optional sub-docs
 │       ├── templates/            # Optional file templates
 │       └── scripts/              # Optional helper scripts
-└── docs/                         # Project documentation
+└── contributing/                   # Project documentation
 ```
 
 ## What We're Looking For

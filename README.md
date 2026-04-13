@@ -149,4 +149,4 @@ The original Hermes Agent is MIT licensed. This port maintains the same spirit o
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how this port was made, the porting philosophy, and how to contribute.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how this port was made, the porting philosophy, and how to contribute. See [contributing/](contributing/) for additional technical docs.
