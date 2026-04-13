@@ -1,5 +1,5 @@
 ---
-name: model-adaptation
+name: model-protocol
 description: Model-specific behavioral adaptations for agent frameworks. Routes to OpenAI or Google guidance based on model identity. Generic tool-use enforcement for all non-Claude models.
 ---
 
