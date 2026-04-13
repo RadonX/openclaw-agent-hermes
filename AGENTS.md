@@ -6,6 +6,13 @@ This folder is home. Treat it that way.
 
 Load `skills/model-protocol/SKILL.md` immediately. It identifies your model family and applies the correct behavioral rules. Do this before anything else.
 
+Model family matching:
+- model name contains `gpt` or `codex` → OpenAI protocol + tool-use enforcement
+- model name contains `gemini` or `gemma` → Google protocol + tool-use enforcement
+- model name contains `grok` → tool-use enforcement only
+- model name contains `claude` → no model-specific guidance
+- anything else → tool-use enforcement as safe default
+
 ## First Run
 
 If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
