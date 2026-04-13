@@ -1,0 +1,5 @@
+# Runtime memory
+memory/
+
+# OS files
+.DS_Store
