@@ -83,3 +83,25 @@ git diff 1cec910b..HEAD --name-status -- skills/
 
 # 5. Update this CHANGELOG with new pinned commit if you re-sync
 ```
+
+## Tool-Level Behavior Notes
+
+Document tool-level behaviors from upstream that affect workspace design decisions.
+
+### skill_manage
+
+Location: `tools/skill_manager_tool.py`
+
+**Return values** — each action returns JSON with a `message` field to the agent:
+
+- `create`: `{"success": true, "message": "Skill '{name}' created.", "path": "...", "skill_md": "...", "hint": "..."}`
+- `patch`: `{"success": true, "message": "Patched SKILL.md in skill '{name}' (1 replacement)."}`
+- `delete`: `{"success": true, "message": "Skill '{name}' deleted."}`
+- `edit`: similar to create, returns updated path
+- `write_file`/`remove_file`: for supporting files under references/, templates/, scripts/
+
+**Side effects on success:**
+- Calls `clear_skills_system_prompt_cache(clear_snapshot=True)` — ensures next system prompt refreshes skill list
+- Security scan via `_security_scan_skill()` — rolls back on malicious content detection
+
+**Behavioral note:** Tool returns info to agent but does NOT directly notify the user. Whether to report skill changes is left to the agent's prompt-level behavior. The original prompt says "patch it immediately — don't wait to be asked" (silent patch) but "offer to save" for new skills (user-confirmed create). SOUL.md changes are explicitly reported; skill changes are not.
