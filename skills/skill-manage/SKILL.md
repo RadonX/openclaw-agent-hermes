@@ -89,3 +89,4 @@ skills/<skill-name>/templates/<file>.template
 3. **Patch > Edit**: prefer targeted fixes over full rewrites
 4. **Maintain**: if you used a skill and found issues, patch it immediately — don't wait to be asked
 5. **Remove supporting files** when deleting a skill
+6. **Report changes** — after creating, patching, or deleting a skill, tell the user what changed and why
