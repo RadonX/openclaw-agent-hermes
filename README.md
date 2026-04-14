@@ -137,6 +137,10 @@ Compared to the full Hermes Agent:
 - **No prompt caching** — Anthropic-style caching is runtime behavior
 - **No context compression execution** — COMPACTION.md defines the protocol, the host implements it
 
+## Upstream Version
+
+This workspace is pinned to Hermes Agent commit `1cec910b` (2026-04-11). See [CHANGELOG.md](CHANGELOG.md) for upstream tracking and sync instructions.
+
 ## Credits
 
 This workspace is a port of [Nous Research's Hermes Agent](https://github.com/NousResearch/hermes-agent). All behavioral design, workspace architecture, and agent philosophy credit goes to the Hermes Agent team.
